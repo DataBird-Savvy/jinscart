@@ -3,17 +3,6 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 def list_products(request):
-    """AI is creating summary for list_products
-
-    Args:
-        request ([type]): [description]
-
-    Returns:
-        [type]: [description]
-    """
-    
     return render(request, 'products.html')
-def product_detail(request, product_id):
-    
-    return render(request, 'product_detail.html', {'product_id': product_id})
-
+def detail_product(request):
+    return render(request, 'product_detail.html')
