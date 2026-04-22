@@ -11,4 +11,3 @@ urlpatterns = [
     path("product_list", views.list_products, name="list_products"),
     path("product_detail", views.detail_product, name="detail_product"),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
