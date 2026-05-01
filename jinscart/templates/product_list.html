@@ -9,7 +9,7 @@
         <div class="row">
             {% for product in product_chunk %}
             <div class="col-4">
-                <a href="{% url 'detail_product' %}"><img src="{{ product.image_url.url}}"></a>
+                <a href="{% url 'detail_product' product.id %}"><img src="{{ product.image_url.url}}"></a>
                 <h4>{{ product.name }}</h4>
               
                 <p>${{ product.price|floatformat:2 }}</p>
