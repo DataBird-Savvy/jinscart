@@ -411,7 +411,7 @@ th:last-child{
     max-width: 300px;
     padding: 0 20px;
     position: absolute;
-    top: 130px;
+    top: 60px;
     transition: transform 1s;
 }
 form input{
@@ -422,7 +422,7 @@ form input{
     border: 1px solid #ccc;
 }
 form .btn{
-    width: 100%;
+    width: 50%;
     border: none;
     cursor: pointer;
     margin: 10px 0;
@@ -431,6 +431,7 @@ form .btn:focus{
     outline: none;
 }
 #LoginForm{
+    top:130px;
     left: -300px;
 }
 #RegForm{
@@ -447,6 +448,16 @@ form a{
     margin-top: 8px;
     transform: translateX(100px);
     transition: transform 1s;
+}
+.error{
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.success{
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 /* Media query for menu */

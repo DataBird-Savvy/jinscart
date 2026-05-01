@@ -11,7 +11,7 @@ class Customer(models.Model):
     )
 
     name = models.CharField(max_length=255)
-    address = models.TextField()
+    address = models.TextField(max_length=255)
     phone_number = models.CharField(max_length=20)
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='customer_profile')
     deleted_status = models.IntegerField(choices=STATUS_CHOICES, default=LIVE)
