@@ -9,8 +9,10 @@
             <div class="col-2">
                 <p>{{product.name}}</p>
                 <h1>{{product.name}}</h1>
-                <h4>${{product.price|floatformat:2}}</h4>
-                <form method="post" action="" enctype="multipart/form-data">
+                <h4 class="price">
+                    ${{product.price|floatformat:2}}
+                </h4>
+                <form method="post" action="{% url 'add_to_cart' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     <input type="hidden" name="product_id" value="{{ product.id }}">
                     <input type="number" name="quantity" value="1">

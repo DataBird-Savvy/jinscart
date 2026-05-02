@@ -13,7 +13,9 @@
                 <a href="{% url 'detail_product' product.id %}"><img src="{{product.image_url.url }}"></a>
                 <h4>{{ product.name }}</h4>
         
-                <p>{{ product.price }}</p>
+                <p class="price">
+                    ${{ product.price|floatformat:2 }}
+                </p>
             </div>
             {% endfor %}
         </div>
@@ -30,7 +32,9 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>{{ product.price }}</p>
+                <p class="price">
+                    ${{ product.price|floatformat:2 }}
+                </p>
             </div>
             {% endfor %}
         </div>
