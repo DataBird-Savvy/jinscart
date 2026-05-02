@@ -17,7 +17,7 @@ def list_products(request):
     if request.GET.get('page'):
         page_number=int(request.GET.get('page', 1))
     product_list=Product.objects.order_by('-priority')
-    paginator = Paginator(product_list, 1)
+    paginator = Paginator(product_list, 4)
     
     page_obj = paginator.get_page(page_number)
     return render(request, 'products.html',{'products':page_obj})

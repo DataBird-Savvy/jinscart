@@ -3,7 +3,14 @@
 
 {% endblock %}
 
-
 {% block content %}
-{% include 'cart_container.html' %}
-{% endblock %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% else %}
+    {% include 'cart_container.html' %}
+{% endif %}
+
+
+{% endblock content %}

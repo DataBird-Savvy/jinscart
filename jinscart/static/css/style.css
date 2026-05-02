@@ -368,6 +368,11 @@ td img{
     display: flex;
     justify-content: flex-end;
 }
+.price {
+    color: #000;        /* dark color */
+    font-weight: 600;   /* semi-bold */
+    font-size: 18px;    /* optional */
+}
 .total-price table{
     border-top: 3px solid #ff523b;
     width: 100%;
