@@ -27,7 +27,7 @@ def show_account(request):
             user = User.objects.create_user(username=username, password=password, email=email)
 
           
-            customer = Customer(user=user, address=address, phone_number=phone)
+            customer = Customer(user=user, address=address, phone_number=phone,name=username)
             customer.save()
            
             messages.success(request, "Registration successful. Please log in.")
@@ -42,6 +42,7 @@ def show_account(request):
         print(username, password)
 
         user = authenticate(request, username=username, password=password)
+       
         if user is not None:
             login(request, user)
             return redirect('home')
